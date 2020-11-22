@@ -1,0 +1,121 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+p,
+a {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: black;
+    font-weight: 400;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    padding: 100px;
+}
+
+.modalwindow {
+    display: inline-block;
+}
+
+.modalwindow .modal-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    cursor: pointer;
+    user-select: none;
+    background-color: steelblue;
+    color: white;
+}
+
+.modalwindow.active .modal-conteiner {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modalwindow.active .modal-conteiner .modalfade {
+    opacity: 1;
+    visibility: visible;
+    margin: 50px auto;
+}
+
+.modalwindow.active .modal-conteiner .modalfade:last-child {
+    margin: 50px auto;
+}
+
+.modalwindow .modal-conteiner {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100vw;
+    background: rgba(0, 0, 0, .6);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.modalwindow .modal-conteiner .modalfade {
+    padding: 12px;
+    padding-bottom: 70px;
+    max-width: 500px;
+    position: relative;
+    background: #fff;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    margin: auto;
+    transition: all 1s ease-in 0.3ms;
+}
+
+.modalwindow .modal-conteiner .modalfade>img {
+    cursor: pointer;
+    content: "";
+    position: absolute;
+    top: 14px;
+    right: 10px;
+    height: 20px;
+    width: 20px;
+}
+
+.modalwindow .modal-conteiner .modalfade .fade-btns {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    bottom: 14px;
+    right: 10px;
+}
+
+.modalwindow .modal-conteiner .modalfade .fade-btns>a {
+    display: inline-block;
+    padding: 12px 20px;
+    cursor: pointer;
+    user-select: none;
+    background-color: steelblue;
+    color: white;
+}
+
+.modalwindow .modal-conteiner .modalfade>h1 {
+    font-size: 29px;
+}
+
+.modalwindow .modal-conteiner .modalfade>p {
+    padding: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 20px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
